@@ -454,34 +454,34 @@
             </div>
             
             <form id="uploadForm">
-                <div class="upload-grid">
-                    <!-- File 1: FB Ads -->
-                    <div class="upload-box" id="fbBox">
-                        <span class="upload-icon">📊</span>
-                        <div class="upload-label">Facebook Ads CSV</div>
-                        <div class="upload-desc">Báo cáo hiệu quả chiến dịch Ads</div>
-                        <div class="file-name-display" id="fbName"></div>
-                        <input type="file" name="fb_file" id="fbFile" accept=".csv" required>
-                    </div>
+               <div class="upload-grid">
+    <!-- File 1: FB Ads -->
+    <div class="upload-box" id="fbBox" onclick="document.getElementById('fbFile').click()">
+        <span class="upload-icon">📊</span>
+        <div class="upload-label">Facebook Ads CSV</div>
+        <div class="upload-desc">Báo cáo hiệu quả chiến dịch Ads</div>
+        <div class="file-name-display" id="fbName">Chưa chọn tệp</div>
+        <input type="file" name="fb_file" id="fbFile" accept=".csv" required style="display:none">
+    </div>
 
-                    <!-- File 2: Click Report -->
-                    <div class="upload-box" id="clickBox">
-                        <span class="upload-icon">🖱️</span>
-                        <div class="upload-label">Shopee Click CSV</div>
-                        <div class="upload-desc">Website click report từ Shopee</div>
-                        <div class="file-name-display" id="clickName"></div>
-                        <input type="file" name="click_file" id="clickFile" accept=".csv" required>
-                    </div>
+    <!-- File 2: Click Report -->
+    <div class="upload-box" id="clickBox" onclick="document.getElementById('clickFile').click()">
+        <span class="upload-icon">🖱️</span>
+        <div class="upload-label">Shopee Click CSV</div>
+        <div class="upload-desc">Website click report từ Shopee</div>
+        <div class="file-name-display" id="clickName">Chưa chọn tệp</div>
+        <input type="file" name="click_file" id="clickFile" accept=".csv" required style="display:none">
+    </div>
 
-                    <!-- File 3: Commission Report -->
-                    <div class="upload-box" id="commBox">
-                        <span class="upload-icon">💰</span>
-                        <div class="upload-label">Shopee Commission CSV</div>
-                        <div class="upload-desc">Affiliate commission report</div>
-                        <div class="file-name-display" id="commName"></div>
-                        <input type="file" name="comm_file" id="commFile" accept=".csv" required>
-                    </div>
-                </div>
+    <!-- File 3: Commission Report -->
+    <div class="upload-box" id="commBox" onclick="document.getElementById('commFile').click()">
+        <span class="upload-icon">💰</span>
+        <div class="upload-label">Shopee Commission CSV</div>
+        <div class="upload-desc">Affiliate commission report</div>
+        <div class="file-name-display" id="commName">Chưa chọn tệp</div>
+        <input type="file" name="comm_file" id="commFile" accept=".csv" required style="display:none">
+    </div>
+</div>
 
                 <div class="btn-container">
                     <button type="submit" class="btn btn-primary" id="submitBtn" disabled>
@@ -763,7 +763,17 @@
             
             const headerP = document.querySelector('header p');
             if (headerP) headerP.textContent = 'Báo cáo Tiếp thị liên kết (Xem ngoại tuyến)';
-        }
+        // Lắng nghe sự kiện hiển thị tên file khi người dùng chọn
+        document.getElementById('fbFile').addEventListener('change', function() {
+            document.getElementById('fbName').innerText = this.files && this.files.length > 0 ? this.files[0].name : 'Chưa chọn tệp';
+        });
+        document.getElementById('clickFile').addEventListener('change', function() {
+            document.getElementById('clickName').innerText = this.files && this.files.length > 0 ? this.files[0].name : 'Chưa chọn tệp';
+        });
+        document.getElementById('commFile').addEventListener('change', function() {
+            document.getElementById('commName').innerText = this.files && this.files.length > 0 ? this.files[0].name : 'Chưa chọn tệp';
+        });
+            }
     </script>
 </body>
 </html>
