@@ -755,7 +755,7 @@
             if (downloadActions) downloadActions.style.display = 'none';
             
             // Populate dashboard
-            renderDashboardData(window.dashboardData);
+            renderDashboardData(window.dashboardData);)
             
             // Update header title and description to match the screenshot
             const headerH1 = document.querySelector('header h1');
@@ -772,8 +772,7 @@
         });
         document.getElementById('commFile').addEventListener('change', function() {
             document.getElementById('commName').innerText = this.files && this.files.length > 0 ? this.files[0].name : 'Chưa chọn tệp';
-        });
-            }
+        });      
     </script>
 </body>
 </html>
