@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <script>window.dashboardData = {"overall_roi":"105.24%","products":[{"clicks":200,"commission":"87,362 ₫","key":"vaylienthangiaset","name":"vaylienthangiaset","orders":20,"roi":"96.53%","spend":"90,506 ₫"},{"clicks":44,"commission":"9,957 ₫","key":"bomuahesatnachchambi","name":"bomuahesatnachchambi","orders":3,"roi":"62.67%","spend":"15,889 ₫"},{"clicks":9,"commission":"0 ₫","key":"keupchenHiveLu","name":"keupchenHiveLu","orders":0,"roi":"0.00%","spend":"6,491 ₫"},{"clicks":2,"commission":"0 ₫","key":"maygotvotudong","name":"maygotvotudong","orders":0,"roi":"0.00%","spend":"5,541 ₫"},{"clicks":6,"commission":"0 ₫","key":"thung12goikhanuotlaubep","name":"thung12goikhanuotlaubep","orders":0,"roi":"0.00%","spend":"5,493 ₫"},{"clicks":1,"commission":"0 ₫","key":"thungractaithodethuong","name":"thungractaithodethuong","orders":0,"roi":"0.00%","spend":"5,304 ₫"},{"clicks":9,"commission":"0 ₫","key":"roupbatbangnhua","name":"roupbatbangnhua","orders":0,"roi":"0.00%","spend":"4,306 ₫"},{"clicks":0,"commission":"0 ₫","key":"bomuahesatnachchambi - 31.6k","name":"bomuahesatnachchambi - 31.6k","orders":0,"roi":"0.00%","spend":"3,822 ₫"},{"clicks":3,"commission":"0 ₫","key":"thaogiatquanaochongtruot","name":"thaogiatquanaochongtruot","orders":0,"roi":"0.00%","spend":"3,430 ₫"},{"clicks":3,"commission":"0 ₫","key":"mayhutthucphamchankhong","name":"mayhutthucphamchankhong","orders":0,"roi":"0.00%","spend":"2,975 ₫"},{"clicks":0,"commission":"0 ₫","key":"bomuahesatnachchambi - 31.6i","name":"bomuahesatnachchambi - 31.6i","orders":0,"roi":"0.00%","spend":"2,265 ₫"},{"clicks":0,"commission":"0 ₫","key":"bomuahesatnachchambi - 31.6e","name":"bomuahesatnachchambi - 31.6e","orders":0,"roi":"0.00%","spend":"2,255 ₫"},{"clicks":0,"commission":"0 ₫","key":"bomuahesatnachchambi - 31.6f","name":"bomuahesatnachchambi - 31.6f","orders":0,"roi":"0.00%","spend":"2,145 ₫"},{"clicks":1,"commission":"0 ₫","key":"GhedauInoxgapgon","name":"GhedauInoxgapgon","orders":0,"roi":"0.00%","spend":"1,754 ₫"},{"clicks":1,"commission":"0 ₫","key":"khayluoisattreotudo","name":"khayluoisattreotudo","orders":0,"roi":"0.00%","spend":"1,349 ₫"},{"clicks":1,"commission":"0 ₫","key":"xoaybachtuocquanao","name":"xoaybachtuocquanao","orders":0,"roi":"0.00%","spend":"765 ₫"},{"clicks":3,"commission":"61,037 ₫","key":"cocdasilicongapgon","name":"Cốc đá silicon gấp gọn","orders":5,"roi":"8732.08%","spend":"699 ₫"},{"clicks":0,"commission":"4,757 ₫","key":"bodochoidienkinh","name":"bodochoidienkinh","orders":1,"roi":"0.00%","spend":"0 ₫"}],"profit":"8,125 ₫","total_comm":"163,114 ₫","total_fb_clicks":281,"total_orders":29,"total_shopee_clicks":283,"total_spend":"154,989 ₫"};</script>
-
+<script>window.dashboardData = null;</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopee Affiliate Report Consolidation</title>
@@ -749,7 +748,7 @@
             // Show the results section
             const resultsSection = document.getElementById('resultsSection');
             if (resultsSection) resultsSection.style.display = 'block';
-            
+            if (resultsSection && window.dashboardData) resultsSection.style.display = 'block';
             // Hide all download actions
             const downloadActions = document.getElementById('downloadActions');
             if (downloadActions) downloadActions.style.display = 'none';
