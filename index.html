@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <script>window.dashboardData = {"overall_roi":"105.24%","products":[{"clicks":200,"commission":"87,362 ₫","key":"vaylienthangiaset","name":"vaylienthangiaset","orders":20,"roi":"96.53%","spend":"90,506 ₫"},{"clicks":44,"commission":"9,957 ₫","key":"bomuahesatnachchambi","name":"bomuahesatnachchambi","orders":3,"roi":"62.67%","spend":"15,889 ₫"},{"clicks":9,"commission":"0 ₫","key":"keupchenHiveLu","name":"keupchenHiveLu","orders":0,"roi":"0.00%","spend":"6,491 ₫"},{"clicks":2,"commission":"0 ₫","key":"maygotvotudong","name":"maygotvotudong","orders":0,"roi":"0.00%","spend":"5,541 ₫"},{"clicks":6,"commission":"0 ₫","key":"thung12goikhanuotlaubep","name":"thung12goikhanuotlaubep","orders":0,"roi":"0.00%","spend":"5,493 ₫"},{"clicks":1,"commission":"0 ₫","key":"thungractaithodethuong","name":"thungractaithodethuong","orders":0,"roi":"0.00%","spend":"5,304 ₫"},{"clicks":9,"commission":"0 ₫","key":"roupbatbangnhua","name":"roupbatbangnhua","orders":0,"roi":"0.00%","spend":"4,306 ₫"},{"clicks":0,"commission":"0 ₫","key":"bomuahesatnachchambi - 31.6k","name":"bomuahesatnachchambi - 31.6k","orders":0,"roi":"0.00%","spend":"3,822 ₫"},{"clicks":3,"commission":"0 ₫","key":"thaogiatquanaochongtruot","name":"thaogiatquanaochongtruot","orders":0,"roi":"0.00%","spend":"3,430 ₫"},{"clicks":3,"commission":"0 ₫","key":"mayhutthucphamchankhong","name":"mayhutthucphamchankhong","orders":0,"roi":"0.00%","spend":"2,975 ₫"},{"clicks":0,"commission":"0 ₫","key":"bomuahesatnachchambi - 31.6i","name":"bomuahesatnachchambi - 31.6i","orders":0,"roi":"0.00%","spend":"2,265 ₫"},{"clicks":0,"commission":"0 ₫","key":"bomuahesatnachchambi - 31.6e","name":"bomuahesatnachchambi - 31.6e","orders":0,"roi":"0.00%","spend":"2,255 ₫"},{"clicks":0,"commission":"0 ₫","key":"bomuahesatnachchambi - 31.6f","name":"bomuahesatnachchambi - 31.6f","orders":0,"roi":"0.00%","spend":"2,145 ₫"},{"clicks":1,"commission":"0 ₫","key":"GhedauInoxgapgon","name":"GhedauInoxgapgon","orders":0,"roi":"0.00%","spend":"1,754 ₫"},{"clicks":1,"commission":"0 ₫","key":"khayluoisattreotudo","name":"khayluoisattreotudo","orders":0,"roi":"0.00%","spend":"1,349 ₫"},{"clicks":1,"commission":"0 ₫","key":"xoaybachtuocquanao","name":"xoaybachtuocquanao","orders":0,"roi":"0.00%","spend":"765 ₫"},{"clicks":3,"commission":"61,037 ₫","key":"cocdasilicongapgon","name":"Cốc đá silicon gấp gọn","orders":5,"roi":"8732.08%","spend":"699 ₫"},{"clicks":0,"commission":"4,757 ₫","key":"bodochoidienkinh","name":"bodochoidienkinh","orders":1,"roi":"0.00%","spend":"0 ₫"}],"profit":"8,125 ₫","total_comm":"163,114 ₫","total_fb_clicks":281,"total_orders":29,"total_shopee_clicks":283,"total_spend":"154,989 ₫"};</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee Affiliate Report Consolidation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --primary: #ff5722;
+            --primary-glow: rgba(255, 87, 34, 0.4);
+            --primary-hover: #ff7043;
+            --success: #10b981;
+            --success-glow: rgba(16, 185, 129, 0.3);
+            --info: #3b82f6;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255, 87, 34, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 40%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            animation: fadeIn Down 0.8s ease;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 30%, #ff5722 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #fff;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 0.75rem;
+        }
+
+        .upload-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .upload-box {
+            position: relative;
+            border: 2px dashed rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.01);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+        }
+
+        .upload-box:hover {
+            border-color: var(--primary);
+            background: rgba(255, 87, 34, 0.03);
+            box-shadow: 0 0 15px var(--primary-glow);
+            transform: translateY(-2px);
+        }
+
+        .upload-box input[type="file"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .upload-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .upload-box:hover .upload-icon {
+            color: var(--primary);
+        }
+
+        .upload-label {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            color: #fff;
+        }
+
+        .upload-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .file-selected {
+            border-color: var(--success);
+            background: rgba(16, 185, 129, 0.03);
+        }
+
+        .file-selected .upload-icon {
+            color: var(--success);
+        }
+
+        .file-selected:hover {
+            border-color: var(--success);
+            background: rgba(16, 185, 129, 0.05);
+            box-shadow: 0 0 15px var(--success-glow);
+        }
+
+        .file-name-display {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--success);
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            gap: 0.5rem;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 14px var(--primary-glow);
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px var(--primary-glow);
+        }
+
+        .btn-primary:disabled {
+            background: #4b5563;
+            color: #9ca3af;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: #fff;
+            box-shadow: 0 4px 14px var(--success-glow);
+        }
+
+        .btn-success:hover {
+            background: #059669;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px var(--success-glow);
+        }
+
+        .btn-info {
+            background: var(--info);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-info:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-premium {
+            background: linear-gradient(135deg, #ff5722 0%, #ff9800 100%);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(255, 87, 34, 0.4);
+        }
+
+        .btn-premium:hover {
+            background: linear-gradient(135deg, #ff7043 0%, #ffb74d 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(255, 87, 34, 0.5);
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Results dashboard */
+        .results-section {
+            display: none;
+        }
+
+        .grid-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-value {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .stat-value.highlight {
+            color: var(--primary);
+        }
+
+        .stat-value.success {
+            color: var(--success);
+        }
+
+        .download-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Table design */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.03);
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.01);
+        }
+
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 87, 34, 0.1);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s infinite linear;
+        }
+
+        .loading-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #fff;
+            letter-spacing: 0.5px;
+        }
+
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            display: none;
+        }
+
+        .alert-error {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #ef4444;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .download-actions {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <div class="loading-text">Đang xử lý dữ liệu báo cáo...</div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Shopee Affiliate Report Generator</h1>
+            <p>Phân tích & Hợp nhất báo cáo Tiếp thị liên kết hàng ngày và hàng tháng</p>
+        </header>
+
+        <div class="alert alert-error" id="errorAlert"></div>
+
+        <!-- Upload Form -->
+        <div class="card" id="uploadCard">
+            <div class="card-title">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary)"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                Tải lên Tệp báo cáo nguồn
+            </div>
+            
+            <form id="uploadForm">
+                <div class="upload-grid">
+                    <!-- File 1: FB Ads -->
+                    <div class="upload-box" id="fbBox">
+                        <span class="upload-icon">📊</span>
+                        <div class="upload-label">Facebook Ads CSV</div>
+                        <div class="upload-desc">Báo cáo hiệu quả chiến dịch Ads</div>
+                        <div class="file-name-display" id="fbName"></div>
+                        <input type="file" name="fb_file" id="fbFile" accept=".csv" required>
+                    </div>
+
+                    <!-- File 2: Click Report -->
+                    <div class="upload-box" id="clickBox">
+                        <span class="upload-icon">🖱️</span>
+                        <div class="upload-label">Shopee Click CSV</div>
+                        <div class="upload-desc">Website click report từ Shopee</div>
+                        <div class="file-name-display" id="clickName"></div>
+                        <input type="file" name="click_file" id="clickFile" accept=".csv" required>
+                    </div>
+
+                    <!-- File 3: Commission Report -->
+                    <div class="upload-box" id="commBox">
+                        <span class="upload-icon">💰</span>
+                        <div class="upload-label">Shopee Commission CSV</div>
+                        <div class="upload-desc">Affiliate commission report</div>
+                        <div class="file-name-display" id="commName"></div>
+                        <input type="file" name="comm_file" id="commFile" accept=".csv" required>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button type="submit" class="btn btn-primary" id="submitBtn" disabled>
+                        <span>🚀</span> Xử lý & Tạo Báo Cáo
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Results Dashboard -->
+        <div class="results-section" id="resultsSection">
+            <!-- Summary stats -->
+            <div class="card">
+                <div class="card-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--success)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    Kết Quả Phân Tích Tổng Hợp
+                </div>
+                
+                <div class="grid-stats">
+                    <div class="stat-card">
+                        <div class="stat-label">Chi phí quảng cáo (ADS)</div>
+                        <div class="stat-value highlight" id="statSpend">0 ₫</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Click FB Outbound</div>
+                        <div class="stat-value" id="statFbClicks">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Click Shopee VN</div>
+                        <div class="stat-value" id="statShopeeClicks">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Tổng Đơn Hàng</div>
+                        <div class="stat-value" id="statOrders">0</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Tổng Hoa Hồng</div>
+                        <div class="stat-value success" id="statComm">0 ₫</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">ROI Tổng Thể</div>
+                        <div class="stat-value success" id="statRoi">0%</div>
+                    </div>
+                </div>
+
+                <!-- Download Actions -->
+                <div class="download-actions" id="downloadActions">
+                    <a href="/download/daily" class="btn btn-success" id="btnDownloadDaily">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Tải Báo Cáo Hàng Ngày (.xlsx)
+                    </a>
+                    <a href="/download/monthly" class="btn btn-info" id="btnDownloadMonthly">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Tải Báo Cáo Tháng (.xlsx)
+                    </a>
+                    <button type="button" class="btn btn-premium" id="btnDownloadHtml" onclick="downloadOfflineHtml()" style="grid-column: span 2;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                        Tải Dashboard HTML (Để chia sẻ / Xem offline)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product breakdown table -->
+            <div class="card">
+                <div class="card-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--info)"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+                    Hiệu Quả Theo Từng Sản Phẩm
+                </div>
+                
+                <div class="table-responsive">
+                    <table id="productTable">
+                        <thead>
+                            <tr>
+                                <th>Mã Subid</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Chi phí quảng cáo</th>
+                                <th>Clicks Shopee VN</th>
+                                <th>Đơn Shopee</th>
+                                <th>Hoa hồng</th>
+                                <th>ROI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dynamically filled -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSummaryData = null;
+
+        const fbFile = document.getElementById('fbFile');
+        const clickFile = document.getElementById('clickFile');
+        const commFile = document.getElementById('commFile');
+        const submitBtn = document.getElementById('submitBtn');
+        
+        const fbBox = document.getElementById('fbBox');
+        const clickBox = document.getElementById('clickBox');
+        const commBox = document.getElementById('commBox');
+        
+        const fbName = document.getElementById('fbName');
+        const clickName = document.getElementById('clickName');
+        const commName = document.getElementById('commName');
+
+        function checkFormValidity() {
+            if (fbFile && clickFile && commFile && fbFile.files.length > 0 && clickFile.files.length > 0 && commFile.files.length > 0) {
+                submitBtn.removeAttribute('disabled');
+            } else if (submitBtn) {
+                submitBtn.setAttribute('disabled', 'true');
+            }
+        }
+
+        if (fbFile) {
+            fbFile.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    fbName.textContent = e.target.files[0].name;
+                    fbBox.classList.add('file-selected');
+                } else {
+                    fbName.textContent = '';
+                    fbBox.classList.remove('file-selected');
+                }
+                checkFormValidity();
+            });
+        }
+
+        if (clickFile) {
+            clickFile.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    clickName.textContent = e.target.files[0].name;
+                    clickBox.classList.add('file-selected');
+                } else {
+                    clickName.textContent = '';
+                    clickBox.classList.remove('file-selected');
+                }
+                checkFormValidity();
+            });
+        }
+
+        if (commFile) {
+            commFile.addEventListener('change', (e) => {
+                if (e.target.files.length > 0) {
+                    commName.textContent = e.target.files[0].name;
+                    commBox.classList.add('file-selected');
+                } else {
+                    commName.textContent = '';
+                    commBox.classList.remove('file-selected');
+                }
+                checkFormValidity();
+            });
+        }
+
+        function renderDashboardData(summary) {
+            document.getElementById('statSpend').textContent = summary.total_spend;
+            document.getElementById('statFbClicks').textContent = summary.total_fb_clicks;
+            document.getElementById('statShopeeClicks').textContent = summary.total_shopee_clicks;
+            document.getElementById('statOrders').textContent = summary.total_orders;
+            document.getElementById('statComm').textContent = summary.total_comm;
+            document.getElementById('statRoi').textContent = summary.overall_roi;
+            
+            // Build product breakdown table
+            const tbody = document.querySelector('#productTable tbody');
+            tbody.innerHTML = '';
+            
+            summary.products.forEach(p => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="font-weight: 500;">${p.key}</td>
+                    <td>${p.name}</td>
+                    <td>${p.spend}</td>
+                    <td>${p.clicks}</td>
+                    <td>${p.orders}</td>
+                    <td style="color: var(--success); font-weight: 500;">${p.commission}</td>
+                    <td style="font-weight: 600; color: ${p.roi.startsWith('0') ? 'inherit' : 'var(--success)'}">${p.roi}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        const uploadForm = document.getElementById('uploadForm');
+        if (uploadForm) {
+            uploadForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                const errorAlert = document.getElementById('errorAlert');
+                const resultsSection = document.getElementById('resultsSection');
+                
+                errorAlert.style.display = 'none';
+                loadingOverlay.style.display = 'flex';
+                
+                const formData = new FormData();
+                formData.append('fb_file', fbFile.files[0]);
+                formData.append('click_file', clickFile.files[0]);
+                formData.append('comm_file', commFile.files[0]);
+                
+                try {
+                    const response = await fetch('/upload', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (!response.ok) {
+                        throw new Error(result.error || 'Có lỗi xảy ra khi xử lý báo cáo!');
+                    }
+                    
+                    currentSummaryData = result.summary;
+                    renderDashboardData(currentSummaryData);
+                    
+                    resultsSection.style.display = 'block';
+                    // Scroll down to results
+                    resultsSection.scrollIntoView({ behavior: 'smooth' });
+                    
+                } catch (err) {
+                    errorAlert.textContent = err.message;
+                    errorAlert.style.display = 'block';
+                    resultsSection.style.display = 'none';
+                } finally {
+                    loadingOverlay.style.display = 'none';
+                }
+            });
+        }
+
+        async function downloadOfflineHtml() {
+            if (!currentSummaryData) {
+                alert('Không có dữ liệu báo cáo để tải!');
+                return;
+            }
+            try {
+                const response = await fetch('/');
+                if (!response.ok) {
+                    throw new Error('Không thể tải file mẫu từ server.');
+                }
+                let htmlText = await response.text();
+                
+                // Inject the dashboard data
+                const dataScript = `\n    <script>window.dashboardData = ${JSON.stringify(currentSummaryData)};<\/script>\n`;
+                htmlText = htmlText.replace('<head>', '<head>' + dataScript);
+                
+                // Trigger file download
+                const blob = new Blob([htmlText], { type: 'text/html;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'AFF_Dashboard.html';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            } catch (err) {
+                alert('Lỗi khi tải file: ' + err.message);
+            }
+        }
+
+        // Check if we are running in standalone mode
+        if (window.dashboardData) {
+            // Hide the upload form completely
+            const uploadCard = document.getElementById('uploadCard');
+            if (uploadCard) uploadCard.style.display = 'none';
+            
+            // Show the results section
+            const resultsSection = document.getElementById('resultsSection');
+            if (resultsSection) resultsSection.style.display = 'block';
+            
+            // Hide all download actions
+            const downloadActions = document.getElementById('downloadActions');
+            if (downloadActions) downloadActions.style.display = 'none';
+            
+            // Populate dashboard
+            renderDashboardData(window.dashboardData);
+            
+            // Update header title and description to match the screenshot
+            const headerH1 = document.querySelector('header h1');
+            if (headerH1) headerH1.textContent = 'AFF Analytics Dashboard';
+            
+            const headerP = document.querySelector('header p');
+            if (headerP) headerP.textContent = 'Báo cáo Tiếp thị liên kết (Xem ngoại tuyến)';
+        }
+    </script>
+</body>
+</html>
